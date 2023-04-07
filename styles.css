@@ -1,0 +1,125 @@
+:root {
+  --bright-orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --background: hsl(0, 0%, 95%);
+  --headings: hsl(0, 0%, 95%);
+  --buttons: hsl(0, 0%, 95%);
+
+  --ff-lexend-deca: "Lexend Deca", sans-serif;
+  --ff-big-shoulders-display: "Big Shoulders Display", cursive;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-lexend-deca);
+  background-color: var(--background);
+}
+
+p {
+  color: var(--paragraphs);
+  font-size: 15px;
+  margin: 0 0 25px 0;
+  line-height: 1.5;
+}
+
+.container h2 {
+  color: var(--headings);
+  font-family: var(--ff-big-shoulders-display);
+  margin: 0 0 15px 0;
+}
+
+.container {
+    padding: 75px 20px 50px 20px;
+}
+
+.container .info-card {
+    padding: 30px;
+}
+
+.info-card img {
+    margin: 0 0 25px 0;
+}
+
+.container .card-1 {
+  background-color: var(--bright-orange);
+  border-radius: 10px 10px 0 0;
+}
+
+.card-1 .btn {
+    color: var(--bright-orange);
+}
+
+.container .card-2 {
+  background-color: var(--dark-cyan);
+}
+
+.card-2 .btn {
+    color: var(--dark-cyan);
+}
+
+.container .card-3 {
+  background-color: var(--very-dark-cyan);
+  border-radius: 0 0 10px 10px;
+}
+
+.card-3 .btn {
+    color: var(--very-dark-cyan);
+}
+
+.btn {
+    background-color: var(--buttons);
+    border: 1px solid white;
+    border-radius: 55px;
+    padding: 12px 30px 12px 30px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: white;
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 900px) {
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 95vh;
+        max-width: 850px;
+        margin: auto;
+    }   
+    .container .card-1 {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .container .card-3 {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .container .btn {
+        margin: 50px 0 15px 0;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1100px;
+    }
+}
